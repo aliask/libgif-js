@@ -898,6 +898,9 @@
             if (callback) load_callback = callback;
             else load_callback = false;
 
+            // Pause playback before the doStep() callback fires and frames[] is blank
+            player.pause();
+
             loading = true;
             frames = [];
             clear();
